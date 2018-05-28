@@ -6,7 +6,7 @@
   -moz-box-sizing:border-box;
   -ms-box-sizing:border-box;
   box-sizing:border-box;
-  //border: red solid 2px;
+  border: red solid 2px;
 }
 
 .container {
