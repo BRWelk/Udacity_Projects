@@ -1,103 +1,20 @@
  // Memory Game Udacity Project
-<<<<<<< HEAD
- // Shuffle board
+//flip card
 
-	 function flip(card) {
-   var pic;
- 	if (card == 0) {
- 		pic = "../images/earth.jpg";
- 	 } else {
- 	 	pic = "../images/solarSystem.jpg";
- 	 }
- 	 document.getElementById('myImage').src = pic;
- 	}
- 
-=======
-// Card data
-const cardsArray = [{
-    'name': 'shell',
-    'img': 'img/earth.jpg" />',
-  },
-  {
-    'name': 'star',
-    'img': 'img/star.png',
-  },
-  {
-    'name': 'bobomb',
-    'img': 'img/bobomb.png',
-  },
-  {
-    'name': 'mario',
-    'img': 'img/mario.png',
-  },
-  {
-    'name': 'luigi',
-    'img': 'img/luigi.png',
-  },
-  {
-    'name': 'peach',
-    'img': 'img/peach.png',
-  },
-  {
-    'name': '1up',
-    'img': 'img/1up.png',
-  },
-  {
-    'name': 'mushroom',
-    'img': 'img/mushroom.png',
-  },
-  {
-    'name': 'thwomp',
-    'img': 'img/thwomp.png',
-  },
-  {
-    'name': 'bulletbill',
-    'img': 'img/bulletbill.png',
-  },
-  {
-    'name': 'coin',
-    'img': 'img/coin.png',
-  },
-  {
-    'name': 'goomba',
-    'img': 'img/goomba.png',
-  },
-];
+function flip() {
+  const img1 = "images/blackHole.jpg", 
+        img1 = "images/earth.jpg",
+		img1 = "images/galaxy1.jpg",
+		img1 = "images/galaxy2.jpg",
+		img1 = "images/galaxy3.jpg",
+		img1 = "images/nebula1.jpg",
+		img1 = "images/nebula2.jpg",
+		img1 = "images/nebula3.jpg", 
+		img1 = "images/solarSystem.jpg",
+		img1 = "images/milkyWay.jpg";
+  let imgElement = document.getElementById('card');
+		
+		imgElement.src = (imgElement.src === img1)? img2 : img1;     
+}
 
-// Grab the div with an id of root
-const game = document.getElementById('game');
-
-// Create a section with a class of grid
-const grid = document.createElement('section');
-grid.setAttribute('class', 'grid');
-
-// Append the grid section to the game div
-game.appendChild(grid);
-
-// For each item in the cardsArray array...
-cardsArray.forEach(item => {
-  // Create a div
-  const card = document.createElement('div');
-
-  // Apply a card class to that div
-  card.classList.add('card');
-
-  // Set the data-name attribute of the div to the cardsArray name
-  card.dataset.name = item.name;
-
-  // Apply the background image of the div to the cardsArray image
-  card.style.backgroundImage = `url(${item.img})`;
-
-  // Append the div to the grid section
-  grid.appendChild(card);
-});
-
-<div class="card" data-name="shell" style="background-image: url("img/blueshell.png");"></div>
-
-// Duplicate array to create a match for each card
-let gameGrid = cardsArray.concat(cardsArray);
-
-// For each item in the gameGrid array...
-gameGrid.forEach(item => {
-  // ...
->>>>>>> 48342ef7757a2e5b9864e2cb2019020ae215cf56
+ 	
