@@ -1,20 +1,40 @@
  // Memory Game Udacity Project
-//flip card
+//shuffle cards
 
-function flip() {
-  const img1 = "images/blackHole.jpg", 
-        img1 = "images/earth.jpg",
-		img1 = "images/galaxy1.jpg",
-		img1 = "images/galaxy2.jpg",
-		img1 = "images/galaxy3.jpg",
-		img1 = "images/nebula1.jpg",
-		img1 = "images/nebula2.jpg",
-		img1 = "images/nebula3.jpg", 
-		img1 = "images/solarSystem.jpg",
-		img1 = "images/milkyWay.jpg";
-  let imgElement = document.getElementById('card');
-		
-		imgElement.src = (imgElement.src === img1)? img2 : img1;     
+let cards = shuffle ([
+    {image1: 'earth.jpg'},
+    {image2: 'solarSystem.jpg'},
+    {image3: 'galaxy1.jpg'},
+    {image4: 'galaxy2.jpg'},
+    {image5: 'galaxy3.jpg'},
+    {image6: 'nebula1.jpg'},
+    {image7: 'mebula2.jpg'},
+    {image8: 'nebula3.jpg'},
+    {image9: 'earth.jpg'},
+    {image10: 'solarSystem.jpg'},
+    {image11: 'galaxy1.jpg'},
+    {image12: 'galaxy2.jpg'},
+    {image13: 'galaxy3.jpg'},
+    {image14: 'nebula1.jpg'},
+    {image15: 'mebula2.jpg'},
+    {image16: 'nebula3.jpg'}
+     ]);
+
+
+
+function shuffle(deal) {
+    let i = deal.length, j = 0, card;
+
+    while (i--) {
+
+        j = Math.floor(Math.random() * (i+1));
+        
+        card = deal[i];
+        deal[i] = deal[j];
+        deal[j] = card;
+    }
+
+    return deal;
 }
 
- 	
+console.log(cards);
