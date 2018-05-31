@@ -8,7 +8,7 @@ let cards = shuffle ([
     {image: 'galaxy2.jpg'},
     {image: 'galaxy3.jpg'},
     {image: 'nebula1.jpg'},
-    {image: 'mebula2.jpg'},
+    {image: 'nebula2.jpg'},
     {image: 'nebula3.jpg'},
     {image: 'earth.jpg'},
     {image: 'solarSystem.jpg'},
@@ -16,7 +16,7 @@ let cards = shuffle ([
     {image: 'galaxy2.jpg'},
     {image: 'galaxy3.jpg'},
     {image: 'nebula1.jpg'},
-    {image: 'mebula2.jpg'},
+    {image: 'nebula2.jpg'},
     {image: 'nebula3.jpg'}
      ]);
 
@@ -47,3 +47,4 @@ function placeImg () {
     })
 }
 
+placeImg();
