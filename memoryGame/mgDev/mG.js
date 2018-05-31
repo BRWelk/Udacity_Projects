@@ -35,7 +35,7 @@ function shuffle(deal) {
     }
 
     return deal;
-}
+};
 
 function placeImg () {
     document.querySelectorAll('img');
@@ -43,8 +43,21 @@ function placeImg () {
     images.forEach((currentValue, currentIndex) =>{
     
     let card = cards[currentIndex];
-    currentValue.setAttribute('src', `images/${card.image}`);
-    })
+    currentValue.setAttribute('src', `images/${card.image}`);     
+    });
 }
 
-placeImg();
+// placeImg();
+
+ const checkMatch = function (imgId) {
+     if (image[imgId] === image[imageId + 8]) {
+        console.log('Match'); {
+            else {
+                console.log('try again')
+            }
+        }
+        const flipCard = function (cardId) {
+            document.getElementById(elementId: DOMString)
+        }
+     }
+ }

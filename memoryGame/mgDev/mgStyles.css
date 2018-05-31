@@ -14,9 +14,10 @@ body {
   }
   
  img {
-  width: 180px;
+  width: 100%;
   height: 135px;
-  vertical-align: middle;
+ 
+
    }
 
  .container {
@@ -35,10 +36,12 @@ body {
   height: 135px;
   margin: 0;
   padding: 0;
+   overflow: hidden;
   }
  
  [class*="col-"] { 
    border: #0000F4 solid 5px; 
+   overflow: hidden;
   }
  
  .col-1 {
