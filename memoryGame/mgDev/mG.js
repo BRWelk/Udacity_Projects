@@ -22,22 +22,22 @@ let cards = shuffle ([
 
 
 
-function shuffle(deal) {
-    let i = deal.length, j = 0, card;
+function shuffle(cards) {
+    let i = cards.length, j = 0, card;
 
     while (i--) {
 
         j = Math.floor(Math.random() * (i+1));
         
-        card = deal[i];
-        deal[i] = deal[j];
-        deal[j] = card;
+        card = cards[i];
+        cards[i] = cards[j];
+        cards[j] = card;
     }
 
-    return deal;
+    return cards;
 };
 
-function placeImg () {
+function deal () {
     document.querySelectorAll('img');
     const images = document.querySelectorAll('img');
     images.forEach((currentValue, currentIndex) =>{
@@ -47,17 +47,17 @@ function placeImg () {
     });
 }
 
-// placeImg();
+window.onload = deal();
 
- const checkMatch = function (imgId) {
-     if (image[imgId] === image[imageId + 8]) {
-        console.log('Match'); {
-            else {
-                console.log('try again')
-            }
-        }
-        const flipCard = function (cardId) {
-            document.getElementById(elementId: DOMString)
-        }
-     }
- }
+//implement front/back card class with JS
+
+
+
+function flipCard() {
+    let x = document.getElementById('img');
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
