@@ -20,6 +20,8 @@ let cards = shuffle ([
     {image: 'nebula3.jpg'}
      ]);
 
+let back = ['images/blackHole.jpg'];
+
 
 
 function shuffle(cards) {

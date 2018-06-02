@@ -8,40 +8,39 @@
   box-sizing:border-box;  
   //border: solid red 1px;
 }
-
 body { 
 
   }
   
  img {
   width: 100%;
-  height: 135px;
- 
-
-   }
+  height: auto;
+  border:solid #80ced6 .5em;
+  border-radius: 20px;
+  }
 
  .container {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     width: 100%;
-    padding: 5% 20%;    
+    padding: 0 20%;
+    background-color: #80ced6;   
    }
    
  .row {
   display:flex; 
   flex-wrap:wrap;
   text-align:center;
-  width:100%; 
-  height: 135px;
-  margin: 0;
-  padding: 0;
-   overflow: hidden;
+  width:100%;   
+  overflow: hidden;
+
   }
  
- [class*="col-"] { 
-   border: #0000F4 solid 5px; 
-   overflow: hidden;
+ [class*="col-"] {   
+   width: 100%;  
+ 
+
   }
  
  .col-1 {
