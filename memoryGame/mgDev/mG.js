@@ -1,6 +1,22 @@
  // Memory Game Udacity Project
 //shuffle cards
 
+//Shuffling card
+function shuffle(cards) {
+    let i = cards.length, j = 0, card;
+
+    while (i--) {
+
+        j = Math.floor(Math.random() * (i+1));
+        
+        card = cards[i];
+        cards[i] = cards[j];
+        cards[j] = card;
+    }
+
+    return cards;
+};
+
 let cards = shuffle ([
     {image: 'earth.jpg'},
     {image: 'solarSystem.jpg'},
@@ -19,25 +35,7 @@ let cards = shuffle ([
     {image: 'nebula2.jpg'},
     {image: 'nebula3.jpg'}
      ]);
-
-
-
-
-//Shuffling card
-function shuffle(cards) {
-    let i = cards.length, j = 0, card;
-
-    while (i--) {
-
-        j = Math.floor(Math.random() * (i+1));
-        
-        card = cards[i];
-        cards[i] = cards[j];
-        cards[j] = card;
-    }
-
-    return cards;
-};
+     
 //Placing cards in grid
 function deal () {    
     const images = document.querySelectorAll('img');
