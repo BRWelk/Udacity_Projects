@@ -23,24 +23,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    width: 100%;
-    padding: 0 20%;
-    background-color: #80ced6;   
+    width: 100%;    
+    padding:  5% 30%;
+    background-color: #80ced6;
    }
    
  .row {
   display:flex; 
   flex-wrap:wrap;
   text-align:center;
-  width:100%;   
+  width:100%; 
+  height: auto; 
   overflow: hidden;
-
   }
  
  [class*="col-"] {   
-   width: 100%;  
- 
-
+   max-width: 180px;
+   height: auto;
   }
  
  .col-1 {

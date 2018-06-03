@@ -20,10 +20,10 @@ let cards = shuffle ([
     {image: 'nebula3.jpg'}
      ]);
 
-let back = ['images/blackHole.jpg'];
 
 
 
+//Shuffling card
 function shuffle(cards) {
     let i = cards.length, j = 0, card;
 
@@ -38,28 +38,24 @@ function shuffle(cards) {
 
     return cards;
 };
-
-function deal () {
-    document.querySelectorAll('img');
+//Placing cards in grid
+function deal () {    
     const images = document.querySelectorAll('img');
     images.forEach((currentValue, currentIndex) =>{
     
     let card = cards[currentIndex];
-    currentValue.setAttribute('src', `images/${card.image}`);     
-    });
+    currentValue.setAttribute('src', `images/${card.image}`);    
+    
+    });    
 }
-
-window.onload = deal();
-
-//implement front/back card class with JS
-
-
-
+//deal();
+//Flipping cards
 function flipCard() {
-    let x = document.getElementById('img');
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+    const img1 = 'images/blackHole.jpg';
+          img2 = deal();
+    const imgElement = document.getElementsByClassName('test');
+    imgElement.src = (imgElement.src === img1) ? img1 : img2;
 }
+
+
+
