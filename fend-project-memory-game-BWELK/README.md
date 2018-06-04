@@ -19,4 +19,9 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
+
 ***BIG THANKS TO Yahya Elharony for providing the Study Jam and helping me understand how the JavaScript works for this project. Working with DOM is a challenge, but it is a bit easier now. Thanks again Yahya.***
+
+A special thanks to Richie Foreman, a Goolge employee who worked with me at #GrowWithGooge in Wichita, KS. He spent about an hour helping me understand the shuffle function and sorting my array.
+
+Much time was spent in MDN learning about DOM and how to .get, document.innerHTML and query.
