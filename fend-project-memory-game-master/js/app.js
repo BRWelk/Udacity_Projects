@@ -1,7 +1,80 @@
 /*
  * Create a list that holds all of your cards
  */
+ // grabbing icons for cards from HTML class "card"
+let cards = ['fa fa-diamond', 'fa fa-diamond', 'fa fa-paper-plane-o', 'fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-anchor', 'fa fa-bolt', 'fa fa-bolt', 'fa fa-cube', 'fa fa-cube',  'fa fa-leaf', 'fa fa-leaf', 'fa fa-bicycle', 'fa fa-bicycle', 'fa fa-bomb', 'fa fa-bomb'];
 
+const cardTable = document.querySelector(".deck");
+let flippedCards = [];
+let matchedCards = [];
+//creating card table
+function startGame(){
+    for (let i = 0; i < cards.length; i++) {
+    const card = document.createElement("li");
+    card.classList.add("card");
+    card.innerHTML = `<i class="${cards[i]}"></i>`;
+    cardTable.appendChild(card);
+    //Click Event for each card
+    click(card);
+}
+}
+
+    // click to flip card
+function click(card) {
+card.addEventListener("click", function() {
+ 
+    const secondCard = this;
+    const firstCard = flippedCards[0];
+
+     //existing flipped cards
+    if(flippedCards.length === 1) {
+
+      card.classList.add("open", "show");          //adding class to HTML that works with .open .show css
+      flippedCards.push(this);                     //this refers to card.addEventListener("click", Function())
+
+     //looking for match
+     compare(secondCard, firstCard);
+
+    
+    } else {
+    //else no opened cards
+      card.classList.add("open", "show");//adding class to HTML that works with .open .show css
+      flippedCards.push(this);//this refers to card.addEventListener("click", Function())
+    }
+
+  });
+}
+
+function compare(secondCard, firstCard) {
+        if(secondCard.innerHTML === firstCard.innerHTML) {
+        //matched cards
+      secondCard.classList.add("match");
+      firstCard.classList.add("match");
+      matchedCards.push(secondCard, firstCard);
+      flippedCards = [];
+      // check game over
+      gameOver();
+        } else {
+            //setting timer for second card to show
+        setTimeout(function() {
+          secondCard.classList.remove("open", "show");
+          firstCard.classList.remove("open", "show");
+          flippedCards = [];
+        }, 750);
+}
+}
+
+  function gameOver() {
+   if (matchedCards.length === cards.length) {
+    setTimeout(function() {
+          flippedCards = [];
+           alert("Game over");
+        }, 750);
+   }
+  }
+
+  //start game 
+  startGame();
 
 /*
  * Display the cards on the page
