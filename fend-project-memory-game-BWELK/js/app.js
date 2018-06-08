@@ -22,6 +22,9 @@ function shuffle(cards) {
     return card;
 };
 
+let minutes = document.createElement("li");
+
+
 const cardTable = document.querySelector(".deck");
 let flippedCards = [];
 let matchedCards = [];
@@ -93,9 +96,9 @@ function compare(secondCard, firstCard) {
   movesContainer.innerHTML = 0;
   function addMove() {
     moves++;
-    movesContainer.innerHTML = moves;
+    movesContainer.innerHTML = 'moves';
     //set rating
-    rating();
+
   }
 
 /*
