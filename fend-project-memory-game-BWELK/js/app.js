@@ -13,7 +13,7 @@ function shuffle(cards) {
     while (i--) {
 
         j = Math.floor(Math.random() * (i+1));
-        
+
         card = cards[i];
         cards[i] = cards[j];
         cards[j] = card;
@@ -38,7 +38,7 @@ function startGame(){
 }
     // click to flip card
 function click(card) {
-card.addEventListener("click", function() { 
+card.addEventListener("click", function() {
     const secondCard = this;
     const firstCard = flippedCards[0];
      //existing flipped cards
@@ -49,7 +49,7 @@ card.addEventListener("click", function() {
      //looking for match
      compare(secondCard, firstCard);
 
-    } else {
+    } else if(flippedCards < 2) {
     //else no opened cards
       card.classList.add("open", "show", "disable");//adding class to HTML that works with .open .show css
       flippedCards.push(this);//this refers to card.addEventListener("click", Function())
@@ -73,7 +73,7 @@ function compare(secondCard, firstCard) {
           secondCard.classList.remove("open", "show", "disable");
           firstCard.classList.remove("open", "show", "disable");
           flippedCards = [];
-        }, 500);
+        }, 750);
 }
          addMove();
 }
@@ -83,7 +83,7 @@ function compare(secondCard, firstCard) {
     setTimeout(function() {
           flippedCards = [];
            alert("Game over");
-        }, 500);
+        }, 750);
    }
   }
 
@@ -105,7 +105,7 @@ const starRating = document.querySelector(".stars");
 function rating() {
     if(moves < 12) {
         starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
-    } else if  ( moves < 18) { starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li> `; 
+    } else if  ( moves < 18) { starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li> `;
     } else  {
         starRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
     }
@@ -124,7 +124,7 @@ restartBtn.addEventListener("click", function(){
     movesContainer.innerHTML = 0;
     starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
 });
-  //start game 
+  //start game
   startGame(shuffle(cards));
    starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
 
