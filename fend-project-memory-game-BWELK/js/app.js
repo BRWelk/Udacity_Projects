@@ -51,7 +51,7 @@ card.addEventListener("click", function() {
 
      //looking for match
      compare(secondCard, firstCard);
-
+     //Fixed more than two cards flipping issue
     } else if(flippedCards < 2) {
     //else no opened cards
       card.classList.add("open", "show", "disable");//adding class to HTML that works with .open .show css
