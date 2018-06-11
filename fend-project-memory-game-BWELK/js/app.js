@@ -44,6 +44,7 @@ function startGame() {
 // click to flip card
 function click(card) {
   card.addEventListener("click", function() {
+
     const secondCard = this;
     const firstCard = flippedCards[0];
     //existing flipped cards
@@ -92,6 +93,7 @@ function gameOver() {
   }
 }
 
+//*************fix moves*************
 //add moves
 const movesContainer = document.querySelector(".moves");
 let moves = 0;
@@ -99,10 +101,33 @@ movesContainer.innerHTML = 0;
 
 function addMove() {
   moves++;
-  movesContainer.innerHTML = 'moves';
-  //set rating
+  movesContainer.innerHTML = ();
 
+  //set rating
 }
+//***********get timer to start at click, not shuffle*******
+//Timer
+const minutesLabel = document.getElementById("minutes"); //Sets the minutes field
+const secondsLabel = document.getElementById("seconds"); //Sets the seconds field
+let totalSeconds = 0; //sets totalSeconds counter to zero
+
+function pad(val) { //Defines the pad function to have a signle peramter of val
+  let valString = val + ""; //before val = 0; after valString = "0"
+  if (valString.length < 2) {
+    return "0" + valString; //before valString = "0"; after valString = "00"
+  } else {
+    return valString; // only if valString.length > 1 valString = "10"
+  }
+}
+
+function setTime() {
+  ++totalSeconds; //Increment total seconds by 1
+  secondsLabel.innerHTML = pad(totalSeconds % 60); //performs modulo (remainder) on totalSeconds to get the seconds count and formats it
+  minutesLabel.innerHTML = pad(Math.floor(totalSeconds / 60)); //Divides totalSeconds to yeild minute count and rounds down the value to nearest whole integer
+}
+
+setInterval(setTime, 1000); //Calls setTime() once per second; setInterval is a method in the JS standard library
+
 
 /*
  *star rating
