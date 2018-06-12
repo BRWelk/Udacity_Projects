@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+  border: 1px red solid;
 }
 
 html,
@@ -14,6 +15,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 body {
@@ -23,9 +25,13 @@ body {
 
 .container {
     display: flex;
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 h1 {
@@ -43,8 +49,8 @@ h1 {
 
 .deck {
     width: 660px;
-    min-height: 680px;
-    background: linear-gradient(160deg,#064688  0%, #9fc5de 100%);
+    height: auto;
+    background: linear-gradient(160deg,#064688  0%, #cfdce6 );
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -56,8 +62,8 @@ h1 {
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
+    position: relative;
+    width: 25%;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
@@ -67,6 +73,13 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    border: #9fc5de solid 2px;
+}
+
+.deck .card::before {
+  content: "";
+	display: block;
+	padding-top: 100%;
 }
 
 .deck .card.open {
@@ -94,24 +107,91 @@ h1 {
  */
 
 .score-panel {
-    text-align: left;
-    width: 345px;
+    text-align: center;
+    width: 80%;
     margin-bottom: 10px;
 }
 
-.score-panel .stars {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
-}
 
-.score-panel .stars li {
+
+.score-panel .stars  {
     list-style: none;
-    display: inline-block;
+    display: inline;
 }
 
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
 }
