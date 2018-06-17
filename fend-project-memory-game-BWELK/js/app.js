@@ -38,8 +38,6 @@ function shuffle(cards) {
   return card;
 };
 
-let minutes = document.createElement("li");
-
 const cardTable = document.querySelector(".deck");
 let flippedCards = [];
 let matchedCards = [];
@@ -48,24 +46,48 @@ function startGame() {
   for (let i = 0; i < cards.length; i++) {
     const card = document.createElement("li");
     card.classList.add("card");
-    
+
     card.innerHTML = `<i class="${cards[i]}"></i>`;
     cardTable.appendChild(card);
     //Click Event for each card
     click(card);
   }
 }
+
+//***********get timer to start at click, not shuffle*******
+const minutesLabel = document.getElementById("minutes"); //Sets the minutes field
+const secondsLabel = document.getElementById("seconds"); //Sets the seconds field
+let totalSeconds = 0; //sets totalSeconds counter to zero
+function pad(val) { //Defines the pad function to have a signle peramter of val
+  let valString = val + ""; //before val = 0; after valString = "0"
+  if (valString.length < 2) {
+    return "0" + valString; //before valString = "0"; after valString = "00"
+  } else {
+    return valString; // only if valString.length > 1 valString = "10"
+  }
+}
+
+function setTime() {
+  ++totalSeconds; //Increment total seconds by 1
+  secondsLabel.innerHTML = pad(totalSeconds % 60); //performs modulo (remainder) on totalSeconds to get the seconds count and formats it
+  minutesLabel.innerHTML = pad(Math.floor(totalSeconds / 60)); //Divides totalSeconds to yeild minute count and rounds down the value to nearest whole integer
+}
+let endTime = '';
+let timesCalled = 0;
+//existing flipped cards
 // click to flip card
 function click(card) {
   card.addEventListener("click", function() {
-
     const secondCard = this;
     const firstCard = flippedCards[0];
-    //existing flipped cards
+    if (timesCalled === 0) {
+    endTime = setInterval(setTime, 1000); //Calls setTime() once per second; setInterval is a method in the JS standard library}
+      timesCalled += 1;
+    }
+
     if (flippedCards.length === 1) {
       card.classList.add("open", "show", "disable"); //adding class to HTML that works with .open .show css
       flippedCards.push(this); //this refers to card.addEventListener("click", Function())
-
       //looking for match
       compare(secondCard, firstCard);
       //Fixed more than two cards flipping issue
@@ -96,13 +118,16 @@ function compare(secondCard, firstCard) {
     }, 750);
   }
   addMove();
+
 }
 //Checking if game is over
 function gameOver() {
+
   if (matchedCards.length === cards.length) {
     setTimeout(function() {
       flippedCards = [];
-      alert("Game over");
+        clearInterval(endTime);
+        alert('game over');
     }, 750);
   }
 }
@@ -115,31 +140,13 @@ movesContainer.innerHTML = 0;
 
 function addMove() {
   moves++;
-  movesContainer.innerHTML = (0);
+  movesContainer.innerHTML = moves;
 
   //set rating
-}
-//***********get timer to start at click, not shuffle*******
-const minutesLabel = document.getElementById("minutes"); //Sets the minutes field
-const secondsLabel = document.getElementById("seconds"); //Sets the seconds field
-let totalSeconds = 0; //sets totalSeconds counter to zero
-
-function pad(val) { //Defines the pad function to have a signle peramter of val
-  let valString = val + ""; //before val = 0; after valString = "0"
-  if (valString.length < 2) {
-    return "0" + valString; //before valString = "0"; after valString = "00"
-  } else {
-    return valString; // only if valString.length > 1 valString = "10"
-  }
+  rating();
 }
 
-function setTime() {
-  ++totalSeconds; //Increment total seconds by 1
-  secondsLabel.innerHTML = pad(totalSeconds % 60); //performs modulo (remainder) on totalSeconds to get the seconds count and formats it
-  minutesLabel.innerHTML = pad(Math.floor(totalSeconds / 60)); //Divides totalSeconds to yeild minute count and rounds down the value to nearest whole integer
-}
 
-setInterval(setTime, 1000); //Calls setTime() once per second; setInterval is a method in the JS standard library
 
 /*
  *star rating
@@ -165,9 +172,14 @@ restartBtn.addEventListener("click", function() {
   startGame(shuffle(cards));
   // Reset related variables
   matchedCards = [];
+  flippedCards = [];
   moves = 0;
+  clearInterval(endTime);
+  totalSeconds = -1;
+  setTime();
   movesContainer.innerHTML = 0;
   starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
+
 });
 //start game
 startGame(shuffle(cards));
