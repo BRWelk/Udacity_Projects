@@ -89,13 +89,13 @@ h1 {
 }
 
 .deck .card.show {
-    font-size: 33px;
+    font-size: 5vw;
 }
 
 .deck .card.match {
     cursor: default;
     background: #02ccba;
-    font-size: 33px;
+    font-size: 5vw;
 }
 
 .deck .card.disable {
@@ -116,7 +116,7 @@ h1 {
 
 .score-panel .stars  {
     list-style: none;
-    display: inline;
+
 }
 
 .score-panel .restart {
@@ -143,7 +143,7 @@ ul li {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+
   width: 100%;
 
 }
