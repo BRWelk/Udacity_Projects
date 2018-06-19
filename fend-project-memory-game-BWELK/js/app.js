@@ -20,7 +20,7 @@ let cards = [
   'fa fa-bomb',
   'fa fa-bomb'
 ];
-
+//function to shuffle cards. This takes the let cards [array] and loops through the cards. It assigns a random number to each card throug Math.random().
 function shuffle(cards) {
   let i = cards.length,
     j = 0,
@@ -54,7 +54,7 @@ function startGame() {
   }
 }
 
-//***********get timer to start at click, not shuffle*******
+
 const minutesLabel = document.getElementById("minutes"); //Sets the minutes field
 const secondsLabel = document.getElementById("seconds"); //Sets the seconds field
 let totalSeconds = 0; //sets totalSeconds counter to zero
@@ -81,6 +81,7 @@ function click(card) {
     const secondCard = this;
     const firstCard = flippedCards[0];
     if (timesCalled === 0) {
+      //^^^^^^^^^^^^do i need endTime or setTime here?**************
     endTime = setInterval(setTime, 1000); //Calls setTime() once per second; setInterval is a method in the JS standard library}
       timesCalled += 1;
     }
@@ -127,7 +128,8 @@ function gameOver() {
     setTimeout(function() {
       flippedCards = [];
         clearInterval(endTime);
-        alert('game over');
+        winTime = clearInterval(endTime);
+        alert(`You won!!! You had ${moves} moves, a star rating of ${starNum} and completed it in ${totalSeconds} seconds. Would you like to play again? ${restartBtn}`);
     }, 750);
   }
 }
@@ -151,6 +153,7 @@ function addMove() {
 /*
  *star rating
  */
+let starNum = 3;
 const starRating = document.querySelector(".stars");
 
 function rating() {
@@ -158,27 +161,33 @@ function rating() {
     starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
   } else if (moves < 20) {
     starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li> `;
+    starNum = 2;
   } else {
     starRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
+    starNum = 1;
   }
 };
 
 //restart button
 const restartBtn = document.querySelector(".restart");
+// Reset related variables
+matchedCards = [];
+flippedCards = [];
+
 restartBtn.addEventListener("click", function() {
-  //CLear cards
-  cardTable.innerHTML = "";
-  // call to create more cards
-  startGame(shuffle(cards));
-  // Reset related variables
-  matchedCards = [];
-  flippedCards = [];
+  movesContainer.innerHTML = 0;
+  starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
   moves = 0;
   clearInterval(endTime);
   totalSeconds = -1;
   setTime();
-  movesContainer.innerHTML = 0;
-  starRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
+  //CLear cards
+  cardTable.innerHTML = "";
+
+  // call to create more cards
+  startGame(shuffle(cards));
+
+
 
 });
 //start game
