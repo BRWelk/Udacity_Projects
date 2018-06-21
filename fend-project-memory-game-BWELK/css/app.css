@@ -1,105 +1,105 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-  //border: 1px red solid;
+*, *::before, *::after {
+  box-sizing: inherit;
+
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
-    font-family: 'Coda', cursive;
+  background: #ffffff url('../img/geometry2.png');
+  /* Background pattern from Subtle Patterns */
+  font-family: 'Coda', cursive;
 }
 
 .container {
-    display: flex;
-    -webkit-flex-wrap: wrap-reverse;
-    -ms-flex-wrap: wrap-reverse;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
-.moves {
-  background-color: ;
+
+#deck {
+  background: linear-gradient(160deg, #064688 0%, #cfdce6);
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 15px;
 }
 
-/*
- * Styles for the deck of cards
- */
+#deck .card {
+  position: relative;
+  width: 9.0vw;
+  background: #2e3d49;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 
-.deck {
-    width: 660px;
-    height: auto;
-    background: linear-gradient(160deg,#064688  0%, #cfdce6 );
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 3em;
+
 }
 
-.deck .card {
-    position: relative;
-    width: 25%;
-    background: #2e3d49;
-    font-size: 0;
-    color: #ffffff;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-    border: #9fc5de solid 2px;
-}
-
-.deck .card::before {
+#deck .card::before {
   content: "";
-	display: block;
-	padding-top: 100%;
+  display: block;
+  padding-top: 100%;
 }
 
-.deck .card.open {
-    transform: rotateY(0);
-    background: #02b3e4;
-    cursor: default;
+#deck .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
 }
 
-.deck .card.show {
-    font-size: 5vw;
+#deck .card.show {
+  font-size: 5vw;
 }
 
-.deck .card.match {
-    cursor: default;
-    background: #02ccba;
-    font-size: 5vw;
+#deck .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 5vw;
 }
 
-.deck .card.disable {
-    pointer-events: none;
+#deck .card.disable {
+  pointer-events: none;
+}
+
+ul {
+  display: flex;
+  flex-wrap:wrap;
+  list-style-type: none;
+  padding-left: 0;
+  width: 45vw;
+  height: 40vw;
+}
+li {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*
@@ -107,45 +107,31 @@ h1 {
  */
 
 .score-panel {
-    text-align: center;
-    width: 80%;
-    margin-bottom: 10px;
+  font-size: 2vw;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-
-
-.score-panel .stars  {
-    list-style: none;
-
+.score-panel .stars {
+  list-style: none;
+  text-align: center;
 }
 
 .score-panel .restart {
-    float: right;
-    cursor: pointer;
+  float: right;
+  cursor: pointer;
 }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul li {
-  position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-
-  margin: 0;
+.sizeAdj {
+  width: 50%;
 }
 
 .row {
   display: flex;
-
+  flex-wrap: wrap;
   width: 100%;
-
 }
 
 .col-1 {
@@ -158,7 +144,7 @@ ul li {
 
 .col-3 {
   width: 25%;
-}
+  }
 
 .col-4 {
   width: 33.33%;

@@ -8,7 +8,7 @@ function shuffle(cards) {
     while (i--) {
 
         j = Math.floor(Math.random() * (i+1));
-        
+
         card = cards[i];
         cards[i] = cards[j];
         cards[j] = card;
@@ -35,16 +35,16 @@ let cards = shuffle ([
     {image: 'nebula2.jpg'},
     {image: 'nebula3.jpg'}
      ]);
-     
+
 //Placing cards in grid
-function deal () {    
+function deal () {
     const images = document.querySelectorAll('img');
     images.forEach((currentValue, currentIndex) =>{
-    
+
     let card = cards[currentIndex];
-    currentValue.setAttribute('src', `images/${card.image}`);    
-    
-    });    
+    currentValue.setAttribute('src', `images/${card.image}`);
+
+    });
 }
 //deal();
 //Flipping cards
@@ -54,6 +54,3 @@ function flipCard() {
     const imgElement = document.getElementsByClassName('test');
     imgElement.src = (imgElement.src === img1) ? img1 : img2;
 }
-
-
-
