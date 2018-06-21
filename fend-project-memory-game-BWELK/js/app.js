@@ -134,7 +134,9 @@ function gameOver() {
     setTimeout(function() {
       flippedCards = [];
       clearInterval(endTime);
-      alert(`You won!!! You had ${moves} moves, a star rating of ${starNum} and completed the Match Game in ${winTime} seconds. Would you like to play again?`);
+      alert(`You won!!! You had ${moves} moves and a star rating of ${starNum}
+ You completed the Match Game in ${winTime} seconds.
+ Would you like to play again?`);
     }, 750);
   }
 }

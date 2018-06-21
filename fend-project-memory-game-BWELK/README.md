@@ -25,3 +25,5 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 A special thanks to Richie Foreman, a Goolge employee who worked with me at #GrowWithGooge in Wichita, KS. He spent about an hour helping me understand the shuffle function and sorting my array.
 
 Much time was spent in MDN learning about DOM and how to .get, document.innerHTML and query.
+
+I used a mix of flex column in the HTML and JavaScript to insert the list for the card deck. Working on getting the alert modal to restart the game
