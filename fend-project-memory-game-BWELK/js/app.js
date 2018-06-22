@@ -38,8 +38,6 @@ function shuffle(cards) {
   return card;
 };
 
-
-
 const cardTable = document.querySelector("#deck");
 let flippedCards = [];
 let matchedCards = [];
@@ -54,7 +52,7 @@ function startGame() {
     //Click Event for each card
     click(card);
   }
-}
+};
 
 const minutesLabel = document.getElementById("minutes"); //Sets the minutes field
 const secondsLabel = document.getElementById("seconds"); //Sets the seconds field
@@ -131,16 +129,15 @@ function compare(secondCard, firstCard) {
 function gameOver() {
 
   if (matchedCards.length === cards.length) {
+
     setTimeout(function() {
       flippedCards = [];
       clearInterval(endTime);
-      alert(`You won!!! You had ${moves} moves and a star rating of ${starNum}
- You completed the Match Game in ${winTime} seconds.
- Would you like to play again?`);
-    }, 750);
-  }
-}
+      winModal();
+    }, 500);
 
+  }
+};
 
 //add moves
 const movesContainer = document.querySelector(".moves");
@@ -157,7 +154,7 @@ function addMove() {
 /*
  *star rating
  */
-let starNum = 3;//game starts at a rating of 3 stars
+let starNum = 3; //game starts at a rating of 3 stars
 const starRating = document.querySelector(".stars");
 
 function rating() {
@@ -165,35 +162,45 @@ function rating() {
     starRating.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`;
   } else if (moves < 20) {
     starRating.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i> `;
-    starNum = 2;//after user has more then 14, but less then 20 moves, rating moves to 2 stars
+    starNum = 2; //after user has more then 14, but less then 20 moves, rating moves to 2 stars
   } else {
     starRating.innerHTML = `<i class="fa fa-star"></i>`;
-    starNum = 1;//rating goes to one star after 20+ moves
+    starNum = 1; //rating goes to one star after 20+ moves
   }
 };
+function reset() {
+  matchedCards = []; //creating open array so matched cards can be stored
+  flippedCards = []; //creating open array so flipped cards can be stored
+  movesContainer.innerHTML = 0; //resetting 0 in HTML for moves
+  starRating.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`; //resetting 3 stars in HTML
+  moves = 0;
+  clearInterval(endTime); //Stopping clock and using endTime to record user time
+  totalSeconds = -1; //subtracting 1 to bring the timer to 0
+  timesCalled = 0;
+  setTime(); //resetting timer
+  //CLear cards
+  cardTable.innerHTML = ""; //creating new board
 
+  // call to create more cards
+startGame(shuffle(cards));
+};
 //restart button
 const restartBtn = document.querySelector(".restart");
 // Reset related variables
 
-restartBtn.addEventListener("click", function() {
-  matchedCards = [];//creating open array so matched cards can be stored
-  flippedCards = [];//creating open array so flipped cards can be stored
-  movesContainer.innerHTML = 0; //resetting 0 in HTML for moves
-  starRating.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`;//resetting 3 stars in HTML
-  moves = 0;
-  clearInterval(endTime);//Stopping clock and using endTime to record user time
-  totalSeconds = -1;//subtracting 1 to bring the timer to 0
-  timesCalled = 0;
-  setTime();//resetting timer
-  //CLear cards
-  cardTable.innerHTML = "";//creating new board
+restartBtn.addEventListener("click", reset);
 
-  // call to create more cards
-  startGame(shuffle(cards));
+function winModal() {
 
-});
+  var r = confirm(`You won!!! You had ${moves} moves and a star rating of ${starNum}
+ You completed the Match Game in ${winTime} seconds.
+ CLICK OK to play again?`);
+  if (r == true) {
+    reset();
+  }
+};
+
 //start game
-startGame(shuffle(cards));
 
+startGame(shuffle(cards));
 /* set up the event listener for a card. If a card is clicked:  - display the card's symbol (put this functionality in another function that you call from this one)  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)  - if the list already has another card, check to see if the two cards match    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one) */
