@@ -182,7 +182,7 @@ function reset() {
   cardTable.innerHTML = ""; //creating new board
 
   // call to create more cards
-startGame(shuffle(cards));
+  startGame(shuffle(cards));
 };
 //restart button
 const restartBtn = document.querySelector(".restart");
