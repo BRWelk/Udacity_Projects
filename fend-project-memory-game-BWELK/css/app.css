@@ -47,7 +47,7 @@ h1 {
 
 #deck .card {
   position: relative;
-  width: 18%;
+  width: 20%;
   background: #2e3d49;
   font-size: 0;
   color: #ffffff;
@@ -181,9 +181,9 @@ li {
 }
 
 
-@media screen (min-width: 351px) and (max-width: 780px) {
+@media screen  and (max-width: 780px) {
   ul {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
   }
 }
