@@ -19,9 +19,12 @@ Fun stuff to watch:
 
  !<img src="https://s.yimg.com/ny/api/res/1.2/H9VIOqP3NtwMebT.6GZQNw--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/31ff118a4e964f7aa687c6c77428a3e2" alt="Mouse head rub gif"/>
 
+ - 'gif was linked from Yahoo: "Facebook adds GIF support to News Feed because we need more dancing bananas" by Danny Gallagher'
 
+ - Once you have made all your matches, a modal box will appear, with your stats. If you would like to play again, click "OK", if you would like to stop, click "Cancel".
 
- gif was linked from Yahoo: "Facebook adds GIF support to News Feed because we need more dancing bananas" by Danny Gallagher.
+ -<b>ENJOY!!!</b>
+
 
 ## Contributing
 Udacity provided the starter template for this project. I was also fortunate enough to have great resources to help me understand how the JavaScript works in symphony with HTML, CSS and the DOM. If you would like to see
