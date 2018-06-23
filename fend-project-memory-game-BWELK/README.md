@@ -21,7 +21,7 @@ Fun stuff to watch:
 
  !<img src="https://s.yimg.com/ny/api/res/1.2/H9VIOqP3NtwMebT.6GZQNw--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/31ff118a4e964f7aa687c6c77428a3e2" alt="Mouse head rub gif"/>
 
- - 'gif was linked from Yahoo: "Facebook adds GIF support to News Feed because we need more dancing bananas" by Danny Gallagher'
+ ***'gif was linked from Yahoo: "Facebook adds GIF support to News Feed because we need more dancing bananas" by Danny Gallagher'***
 
  - Once you have made all your matches, a modal box will appear, with your stats. If you would like to play again, click "OK", if you would like to stop, click "Cancel".
 
