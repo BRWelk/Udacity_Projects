@@ -17,9 +17,7 @@ Fun stuff to watch:
 
 - The final header column is reset button, in case you get distracted and need to start over. This is usually a speed induced event.
 
- !<img src="https://s.yimg.com/ny/api/res/1.2/H9VIOqP3NtwMebT.6GZQNw--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/31ff118a4e964f7aa687c6c77428a3e2"
- "alt=Markdown mouse gif"
- style="width: 50px" />
+ !<img src="https://s.yimg.com/ny/api/res/1.2/H9VIOqP3NtwMebT.6GZQNw--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/31ff118a4e964f7aa687c6c77428a3e2"/>
 
 
 
