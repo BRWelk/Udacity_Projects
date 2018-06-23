@@ -17,9 +17,9 @@ Fun stuff to watch:
 
 - The final header column is reset button, in case you get distracted and need to start over. This is usually a speed induced event.
 
- ![Alt Text](https://s.yimg.com/ny/api/res/1.2/DLBfN5cUNe0Yg6kum4XEGQ--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/270adfc46edab01e0e2fc453ac2598f8=250x250)
+ ![Alt Text](https://s.yimg.com/ny/api/res/1.2/DLBfN5cUNe0Yg6kum4XEGQ--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/270adfc46edab01e0e2fc453ac2598f8 | 250x250)
 
- 
+
  gif was linked from Yahoo: "Facebook adds GIF support to News Feed because we need more dancing bananas" by Danny Gallagher.
 
 ## Contributing
