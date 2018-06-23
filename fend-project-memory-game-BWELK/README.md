@@ -23,7 +23,7 @@ Fun stuff to watch:
 
  - Once you have made all your matches, a modal box will appear, with your stats. If you would like to play again, click "OK", if you would like to stop, click "Cancel".
 
- -<b>ENJOY!!!</b>
+          <b>ENJOY!!!</b>
 
 
 ## Contributing
