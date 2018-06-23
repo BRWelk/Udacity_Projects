@@ -29,7 +29,7 @@ Fun stuff to watch:
 ## Contributing
 Udacity provided the starter template for this project. I was also fortunate enough to have great resources to help me understand how the JavaScript works in symphony with HTML, CSS and the DOM. If you would like to see
 
-***BIG THANKS TO THE FOLLOWING INCREDIBLE PEOPLE:
+***BIG THANKS TO THE FOLLOWING INCREDIBLE PEOPLE***
 
 - Salma, my Udacity mentor. She encourages me and is always there to provide help with code and suggesting ways to improve my projects and skills.
 
