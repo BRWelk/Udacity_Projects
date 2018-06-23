@@ -1,6 +1,6 @@
 # Memory Game Project
 * [Play the Match Game](https://rawgit.com/BRWelk/Udacity_Projects/master/fend-project-memory-game-BWELK/index.html)
-It will help to read the captivating content below.
+- It will help to read the captivating content below.
 
 ## Table of Contents
 
