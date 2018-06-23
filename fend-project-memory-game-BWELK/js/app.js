@@ -158,9 +158,9 @@ let starNum = 3; //game starts at a rating of 3 stars
 const starRating = document.querySelector(".stars");
 
 function rating() {
-  if (moves < 14) {
+  if (moves < 15) {
     starRating.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`;
-  } else if (moves < 20) {
+  } else if (moves < 21) {
     starRating.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i> `;
     starNum = 2; //after user has more then 14, but less then 20 moves, rating moves to 2 stars
   } else {
