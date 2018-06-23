@@ -1,4 +1,5 @@
 # Memory Game Project
+- https://rawgit.com/BRWelk/Udacity_Projects/master/fend-project-memory-game-BWELK/index.html
 
 ## Table of Contents
 
@@ -27,7 +28,7 @@ Fun stuff to watch:
 
 
 ## Contributing
-Udacity provided the starter template for this project. I was also fortunate enough to have great resources to help me understand how the JavaScript works in symphony with HTML, CSS and the DOM. If you would like to see
+Udacity provided the starter template for this project. I was also fortunate enough to have great resources to help me understand how the JavaScript works in symphony with HTML, CSS and the DOM.
 
 ***BIG THANKS TO THE FOLLOWING INCREDIBLE PEOPLE***
 
