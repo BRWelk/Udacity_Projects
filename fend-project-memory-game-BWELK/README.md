@@ -1,5 +1,5 @@
 # Memory Game Project
- *[Play the Match Game](https://rawgit.com/BRWelk/Udacity_Projects/master/fend-project-memory-game-BWELK/index.html)
+* [Play the Match Game](https://rawgit.com/BRWelk/Udacity_Projects/master/fend-project-memory-game-BWELK/index.html)
 
 ## Table of Contents
 
