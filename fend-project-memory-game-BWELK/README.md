@@ -17,7 +17,7 @@ Fun stuff to watch:
 
 - The final header column is reset button, in case you get distracted and need to start over. This is usually a speed induced event.
 
- !<img src="https://s.yimg.com/ny/api/res/1.2/H9VIOqP3NtwMebT.6GZQNw--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/31ff118a4e964f7aa687c6c77428a3e2" alt="Mouse headrub gif" style="width: 50px;"/>
+ !<img src="https://s.yimg.com/ny/api/res/1.2/H9VIOqP3NtwMebT.6GZQNw--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/31ff118a4e964f7aa687c6c77428a3e2" alt="Mouse head rub gif"/>
 
 
 
@@ -26,10 +26,16 @@ Fun stuff to watch:
 ## Contributing
 Udacity provided the starter template for this project. I was also fortunate enough to have great resources to help me understand how the JavaScript works in symphony with HTML, CSS and the DOM. If you would like to see
 
-***BIG THANKS TO Yahya Elharony for providing the Study Jam and helping me understand how the JavaScript works for this project. Working with DOM is a challenge, but it is a bit easier now. Thanks again Yahya.***
+***BIG THANKS TO THE FOLLOWING INCREDIBLE PEOPLE:
 
-A special thanks to Richie Foreman, a Goolge employee who worked with me at #GrowWithGooge in Wichita, KS. He spent about an hour helping me understand the shuffle function and sorting my array.
+- Salma, my Udacity mentor. She encourages me and is always there to provide help with code and suggesting ways to improve my projects and skills.
+
+- Yahya Elharony for providing the Study Jam and helping me understand how the JavaScript works for this project. Working with DOM is a challenge, but it is a bit easier now. Thanks again Yahya.
+
+- Richie Foreman, a Goolge employee who worked with me at #GrowWithGooge in Wichita, KS. He spent about an hour helping me understand the shuffle function and sorting my array.
+
+- Zachary Welk, my son. A graduate from KU with an Engineering Degree in IT. He works for ZOOM Video Communications in the IT department. We used ZOOM to video chat and share my work screens so he could walk me through the JavaScript logic when I struggled.
 
 Much time was spent in MDN learning about DOM and how to .get, document.innerHTML and query.
 
-I used a mix of flex column in the HTML and JavaScript to insert the list for the card deck. Working on getting the alert modal to restart the game
+This project is my Frankenstein. I used a simple bootstrap type row/col setup and worked it together with my UL/LI and css to make it flex repsonsively. Please let me know what bugs are out there.
