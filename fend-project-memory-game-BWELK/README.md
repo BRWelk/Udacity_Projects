@@ -15,7 +15,9 @@ Fun stuff to watch:
 
 - The third header column has your timer. The time starts recording on your first click and stops on the final pair match. I recommend working on getting your number of moves under 14 and then work towards shaving the time.
 
-- The final header column is reset button, in case you get distracted and need to start over. This is usually a speed induced event. ![Alt Text](https://s.yimg.com/ny/api/res/1.2/DLBfN5cUNe0Yg6kum4XEGQ--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/270adfc46edab01e0e2fc453ac2598f8) 
+- The final header column is reset button, in case you get distracted and need to start over. This is usually a speed induced event.
+
+ ![Alt Text](https://s.yimg.com/ny/api/res/1.2/DLBfN5cUNe0Yg6kum4XEGQ--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cnet.cbs.com/270adfc46edab01e0e2fc453ac2598f8) 
 
 
 ## Contributing
